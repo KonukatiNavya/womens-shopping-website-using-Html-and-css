@@ -1,0 +1,167 @@
+/* Basic CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.hero {
+    background: #f4f4f4;
+    padding: 50px 20px;
+    background-image: url(sale.gif);
+    height: 600px;
+}
+.about{
+    background-image: url(img.webp);
+    height: 600px;
+}
+
+
+.products .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+
+}
+
+.products .product-item {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #0c0c0c;
+    text-align: center;
+    padding:2rem;
+    box-shadow: 0 .5rem 1.5rem black;
+}
+
+.products .product-item img {
+    max-width: 80%;
+    height: 200px;
+}
+.products .product-item img:hover{
+    transform:scale(1.1);
+}
+
+.products .product-item button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.products .product-item button:hover {
+    background: rgb(109, 3, 109);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 30px 20px;
+    }
+
+    .products .product-item {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 20px 10px;
+    }
+
+    .products .product-item {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    form input, form textarea {
+        max-width: 100%;
+    }
+}
